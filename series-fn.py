@@ -5,5 +5,6 @@ def add_one():
     n = n + 1
     return n
 
-add_one()
-add_one()
+print add_one()
+print add_one()
+print add_one()

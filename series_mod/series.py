@@ -1,3 +1,5 @@
+# this is an implementation of the 'series' functionality using a module.
+
 n = 0
 
 def add_one():
