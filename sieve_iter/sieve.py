@@ -10,8 +10,8 @@ class sieve(object):
     def __iter__(self):
         return self
         
-    def _is_prime(self, primes, n):
-        for i in primes:
+    def _is_prime(self, n):
+        for i in self._primeslist:
             if n % i == 0:
                 return False
         return True
@@ -19,7 +19,7 @@ class sieve(object):
     def next(self):
         start = self._primeslist[-1] + 1
         while 1:
-            if self._is_prime(self._primeslist, start):
+            if self._is_prime(start):
                 self._primeslist.append(start)
                 return start
 

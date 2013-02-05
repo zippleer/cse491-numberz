@@ -2,8 +2,6 @@
 # an implementation of Eratosthenes' Sieve using generator functionality:
 #   http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 
-_primeslist = [2]
-
 def _is_prime(primes, n):
     for i in primes:
         if n % i == 0:
@@ -11,6 +9,7 @@ def _is_prime(primes, n):
     return True
 
 def sieve():
+    _primeslist = [2]
     start = _primeslist[-1] + 1
     while 1:
         if _is_prime(_primeslist, start):
